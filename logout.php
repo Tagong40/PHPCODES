@@ -1,0 +1,16 @@
+<?php 
+include("path.php");
+
+session_start();
+
+unset($_SESSION['id']);
+unset($_SESSION['admin']);
+unset($_SESSION['email']);
+unset($_SESSION['username']);
+unset($_SESSION['message']);
+
+session_destroy();
+
+header('location: ' . BASE_URL . 'index.php');
+
+?>
